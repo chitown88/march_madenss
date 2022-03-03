@@ -13,7 +13,7 @@ import mm3
 
 def run():
     current_year = datetime.datetime.now().year
-    current_year_input = input(f'Enter year (2000-{current_year}) to predict March Madness.\n-> ')
+    current_year_input = int(input(f'Enter year (2000-{current_year}) to predict March Madness.\n-> '))
     
     team_stats, final_results, school_links = mm1.run(current_year_input)
     to_predict_df = mm2.run(current_year, team_stats, school_links)
