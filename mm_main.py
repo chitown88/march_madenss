@@ -21,7 +21,6 @@ def run():
     
     return all_pick_results
 
-
 if __name__ == "__main__":
    all_pick_results = run()
    print(all_pick_results)
