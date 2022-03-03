@@ -16,14 +16,14 @@ def run():
     current_year_input = int(input(f'Enter year (2000-{current_year}) to predict March Madness.\n-> '))
     
     team_stats, final_results, school_links = mm1.run(current_year_input)
-    to_predict_df = mm2.run(current_year, team_stats, school_links)
-    all_pick_results = mm3.run(current_year, to_predict_df, final_results, team_stats)
+    to_predict_df = mm2.run(current_year_input, team_stats, school_links)
+    all_pick_results = mm3.run(current_year_input, to_predict_df, final_results, team_stats)
     
     return all_pick_results
 
 if __name__ == "__main__":
    all_pick_results = run()
    print(all_pick_results)
-   #all_pick_results.to_csv('results.csv', index=False)
+   all_pick_results.to_csv(f'{current_year_input}_results.csv', index=False)
 
 
