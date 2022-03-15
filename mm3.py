@@ -227,7 +227,13 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     pick_results = picks[['School','School_Opp', 'Outcome', 'Prob']]
     pick_results['Winner'] = np.where(picks['Outcome'] == 'Win', picks['School'], picks['School_Opp'])
-    pick_results['Upset'] = np.where(picks['Outcome'] == 'Loss', 'Upset', 'No')
+    pick_results['Loser'] = np.where(picks['Outcome'] == 'Win', picks['School_Opp'], picks['School'])
+    pick_results['WinnerSeed'] = pick_results['Winner'].map(seedings_dict)
+    pick_results['LoserSeed'] = pick_results['Loser'].map(seedings_dict)
+    pick_results['Upset'] = np.where(pick_results['WinnerSeed'] > pick_results['LoserSeed'], 'Upset', 'No')
+    drop_cols_alpha = ['WinnerSeed', 'LoserSeed', 'Loser']
+
+    pick_results = pick_results.drop(drop_cols_alpha, axis=1)    
     
     rnd+=1
     pick_results['Round'] = rnd
@@ -271,7 +277,13 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     pick_results = picks[['School','School_Opp', 'Outcome', 'Prob']]
     pick_results['Winner'] = np.where(picks['Outcome'] == 'Win', picks['School'], picks['School_Opp'])
-    pick_results['Upset'] = np.where(picks['Outcome'] == 'Loss', 'Upset', 'No')
+    pick_results['Loser'] = np.where(picks['Outcome'] == 'Win', picks['School_Opp'], picks['School'])
+    pick_results['WinnerSeed'] = pick_results['Winner'].map(seedings_dict)
+    pick_results['LoserSeed'] = pick_results['Loser'].map(seedings_dict)
+    pick_results['Upset'] = np.where(pick_results['WinnerSeed'] > pick_results['LoserSeed'], 'Upset', 'No')
+    drop_cols_alpha = ['WinnerSeed', 'LoserSeed', 'Loser']
+
+    pick_results = pick_results.drop(drop_cols_alpha, axis=1)    
     
     rnd+=1
     pick_results['Round'] = rnd
@@ -314,7 +326,13 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     pick_results = picks[['School','School_Opp', 'Outcome', 'Prob']]
     pick_results['Winner'] = np.where(picks['Outcome'] == 'Win', picks['School'], picks['School_Opp'])
-    pick_results['Upset'] = np.where(picks['Outcome'] == 'Loss', 'Upset', 'No')
+    pick_results['Loser'] = np.where(picks['Outcome'] == 'Win', picks['School_Opp'], picks['School'])
+    pick_results['WinnerSeed'] = pick_results['Winner'].map(seedings_dict)
+    pick_results['LoserSeed'] = pick_results['Loser'].map(seedings_dict)
+    pick_results['Upset'] = np.where(pick_results['WinnerSeed'] > pick_results['LoserSeed'], 'Upset', 'No')
+    drop_cols_alpha = ['WinnerSeed', 'LoserSeed', 'Loser']
+
+    pick_results = pick_results.drop(drop_cols_alpha, axis=1)    
     
     rnd+=1
     pick_results['Round'] = rnd
@@ -360,7 +378,13 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     pick_results = picks[['School','School_Opp', 'Outcome', 'Prob']]
     pick_results['Winner'] = np.where(picks['Outcome'] == 'Win', picks['School'], picks['School_Opp'])
-    pick_results['Upset'] = np.where(picks['Outcome'] == 'Loss', 'Upset', 'No')
+    pick_results['Loser'] = np.where(picks['Outcome'] == 'Win', picks['School_Opp'], picks['School'])
+    pick_results['WinnerSeed'] = pick_results['Winner'].map(seedings_dict)
+    pick_results['LoserSeed'] = pick_results['Loser'].map(seedings_dict)
+    pick_results['Upset'] = np.where(pick_results['WinnerSeed'] > pick_results['LoserSeed'], 'Upset', 'No')
+    drop_cols_alpha = ['WinnerSeed', 'LoserSeed', 'Loser']
+
+    pick_results = pick_results.drop(drop_cols_alpha, axis=1)      
     
     rnd+=1
     pick_results['Round'] = rnd
@@ -403,7 +427,13 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     pick_results = picks[['School','School_Opp', 'Outcome', 'Prob']]
     pick_results['Winner'] = np.where(picks['Outcome'] == 'Win', picks['School'], picks['School_Opp'])
-    pick_results['Upset'] = np.where(picks['Outcome'] == 'Loss', 'Upset', 'No')
+    pick_results['Loser'] = np.where(picks['Outcome'] == 'Win', picks['School_Opp'], picks['School'])
+    pick_results['WinnerSeed'] = pick_results['Winner'].map(seedings_dict)
+    pick_results['LoserSeed'] = pick_results['Loser'].map(seedings_dict)
+    pick_results['Upset'] = np.where(pick_results['WinnerSeed'] > pick_results['LoserSeed'], 'Upset', 'No')
+    drop_cols_alpha = ['WinnerSeed', 'LoserSeed', 'Loser']
+
+    pick_results = pick_results.drop(drop_cols_alpha, axis=1)    
     
     rnd+=1
     pick_results['Round'] = rnd
@@ -423,7 +453,13 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     all_pick_results['School_Opp_Seed'] = all_pick_results['School_Opp_Seed'].astype(int)
     all_pick_results['School_Seed'] = all_pick_results['School_Seed'].astype(int)
-    all_pick_results['Upset'] = np.where((all_pick_results['Outcome'] == 'Loss') & (all_pick_results['School_Opp_Seed'] > all_pick_results['School_Seed']), 'Upset', 'No')
+    
+    all_pick_results['Loser'] = np.where(all_pick_results['Outcome'] == 'Win', all_pick_results['School_Opp'], all_pick_results['School'])
+    all_pick_results['WinnerSeed'] = all_pick_results['Winner'].map(seedings_dict)
+    all_pick_results['LoserSeed'] = all_pick_results['Loser'].map(seedings_dict)
+    all_pick_results['Upset'] = np.where(all_pick_results['WinnerSeed'] > all_pick_results['LoserSeed'], 'Upset', 'No')
+    drop_cols_alpha = ['WinnerSeed', 'LoserSeed', 'Loser']
+    all_pick_results = all_pick_results.drop(drop_cols_alpha, axis=1)  
     
     print ('\nAdvanced to second round:\n',first_round_winners)
     print ('\nAdvanced to Sweet 16:\n',second_round_winners)
