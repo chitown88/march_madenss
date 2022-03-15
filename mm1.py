@@ -20,6 +20,7 @@ def run(current_year):
     
     results = pd.DataFrame()
     seasons_list = list(range(1993, current_year+1))
+    #seasons_list = list(range(2021, current_year+1))
     #seasons_list = list(range(1993, 1995))
     #seasons_list = [ x for x in seasons_list if x != 2020]
     

@@ -205,7 +205,7 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     second_round_df = second_round_df.merge(team_stats_2019, how='left', left_on = ['School_Opp', 'Season'], right_on = ['School', 'Season'], suffixes = ("","_Opp"))
     second_round_df.rename(columns={'Points_Opp': 'Points_Allowed'}, inplace=True)
     second_round_df = second_round_df.loc[:, ~second_round_df.columns.duplicated()]
-    
+
     for col in team_norm_cols:
         second_round_df[col] = second_round_df[col].astype(float) / second_round_df['G'].astype(int)
     

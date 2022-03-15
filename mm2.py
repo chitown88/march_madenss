@@ -32,7 +32,7 @@ def run(current_year, team_stats_2019, school_links):
         #regions[-1] = 'national'
         regions = regions[:4]
         
-        
+        playInTeamList = []
         for region in regions:
             ##################
             #region = regions[0]
@@ -40,9 +40,22 @@ def run(current_year, team_stats_2019, school_links):
             rounds = bracket.find_all('div',{'class':'round'})
             #for r in rounds:
                 #############
+            
+            playIn = bracket.find('p')
+            playInSeed = playIn.find_all('strong')[-1].text
+            playInTeamNames_alpha = playIn.find_all('a', href=True)
+            playInTeamNames = []
+            for x in playInTeamNames_alpha:
+                playInTeamNames.append(school_links[x['href'] + str(season) + '.html'])
+                
+            playInTeamNames = '|'.join(playInTeamNames)    
+            playInTeamList.append(playInTeamNames)   
+               
             r = rounds[0]
             games = r.find_all('div')
             comments = r.find_all(string=lambda text:isinstance(text,bs4.Comment))
+            
+            processPlayInTeams = False
             
             idx = 0
             for comment in comments:
@@ -58,8 +71,12 @@ def run(current_year, team_stats_2019, school_links):
                         if team_a_seed == '':
                             team_a_seed = str(seed_list[idx*2])  
                     except:
-                        team_a_name = 'N/A'
-                        team_a_seed = str(seed_list[idx*2])
+                        #team_a_name = 'N/A'
+                        team_a_name = playInTeamNames
+                        #team_a_seed = str(seed_list[idx*2])
+                        team_a_seed = playInSeed
+                        processPlayInTeams = True
+
                     
                     try:
                         team_b = teams[1]
@@ -68,8 +85,11 @@ def run(current_year, team_stats_2019, school_links):
                         if team_b_seed == '':
                             team_b_seed = str(seed_list[(idx*2)+1])                  
                     except:
-                        team_b_name = 'N/A'
-                        team_b_seed = str(seed_list[(idx*2)+1]) 
+                        #team_b_name = 'N/A'
+                        team_b_name = playInTeamNames
+                        #team_b_seed = str(seed_list[(idx*2)+1]) 
+                        team_b_seed = playInSeed
+                        processPlayInTeams = True
                     
                     
                     temp_df = pd.DataFrame([[team_a_seed, team_a_name, team_b_seed, team_b_name, season]], columns=['School_Seed','School','School_Opp_Seed','School_Opp', 'Season'])
@@ -79,6 +99,27 @@ def run(current_year, team_stats_2019, school_links):
     
     
     tourny_results_2019 = tourny_results_2019.reset_index(drop=True)  
+    
+    # AVERAGE OUT PLAYIN TEAMS STATS
+    playIn_team_stats_2019 = pd.DataFrame()
+    
+    if processPlayInTeams == True:
+        for playInTeams_temp in playInTeamList:
+            teamList = playInTeams_temp.split('|')
+            temp_df = team_stats_2019[team_stats_2019['School'].isin(teamList)]
+            for col in temp_df.columns:
+                try:
+                    temp_df[col] = temp_df[col].astype(float)
+                except:
+                    pass
+            averageDf = pd.DataFrame(temp_df.mean()).T
+            averageDf['School'] = playInTeams_temp
+            averageDf = averageDf[team_stats_2019.columns]
+            
+            playIn_team_stats_2019 = playIn_team_stats_2019.append(averageDf)
+            
+        
+        team_stats_2019 = team_stats_2019.append(playIn_team_stats_2019).reset_index(drop=True)
     
     to_predict_df = tourny_results_2019.merge(team_stats_2019, how='left', left_on = ['School', 'Season'], right_on = ['School','Season'])
     to_predict_df = to_predict_df.merge(team_stats_2019, how='left', left_on = ['School_Opp', 'Season'], right_on = ['School','Season'], suffixes = ("","_Opp"))
@@ -90,6 +131,6 @@ def run(current_year, team_stats_2019, school_links):
     to_predict_df['School_Seed'] = to_predict_df['School_Seed'].astype(int)
     to_predict_df['School_Opp_Seed'] = to_predict_df['School_Opp_Seed'].astype(int)
     
-    return to_predict_df
+    return to_predict_df, team_stats_2019
 
 
