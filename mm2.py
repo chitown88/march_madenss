@@ -46,7 +46,8 @@ def run(current_year, team_stats_2019, school_links):
             playInTeamNames_alpha = playIn.find_all('a', href=True)
             playInTeamNames = []
             for x in playInTeamNames_alpha:
-                playInTeamNames.append(school_links[x['href'] + str(season) + '.html'])
+                if 'boxscores' not in x['href']:
+                    playInTeamNames.append(school_links[x['href'] + str(season) + '.html'])
                 
             playInTeamNames = '|'.join(playInTeamNames)    
             playInTeamList.append(playInTeamNames)   
