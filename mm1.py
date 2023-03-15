@@ -37,7 +37,8 @@ def run(current_year):
         #table.columns = cols
         table['Season'] = season
         
-        results = results.append(table)
+        #results = results.append(table)
+        results = pd.concat([results, table])
         time.sleep(5)
         print ('Downloaded %s Season' %season)
         
@@ -109,7 +110,8 @@ def run(current_year):
                         if w_team == l_team:
                             continue
                         temp_df = pd.DataFrame([[w_team_seed, w_team, l_team_seed, l_team, season]], columns=['Winning_Team_Seed','Winning_Team','Losing_Team_Seed','Losing_Team', 'Season'])
-                        tourny_results = tourny_results.append(temp_df)
+                        #tourny_results = tourny_results.append(temp_df)
+                        tourny_results = pd.concat([tourny_results, temp_df])
                         print ('%s: %s: %-20s       %s: %s' %(season, w_team_seed, w_team, l_team_seed, l_team))
     
     
@@ -126,7 +128,9 @@ def run(current_year):
     final_results_b = final_results_b.merge(results, how='left', left_on = ['Winning_Team','Season'], right_on = ['School','Season'], suffixes = ("","_Opp"))
     final_results_b = final_results_b[final_results_b['School'].notnull()]
     
-    final_results = final_results_a.append(final_results_b).reset_index(drop=True)
+    #final_results = final_results_a.append(final_results_b).reset_index(drop=True)
+    final_results = pd.concat([final_results_a, final_results_b])
+    final_results = final_results.reset_index(drop=True)
     
     final_results['Outcome'] = np.where((final_results['School'] == final_results['Winning_Team']), 'Win', 'Loss')
     

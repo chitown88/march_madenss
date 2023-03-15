@@ -31,7 +31,8 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     seedings_2019_b.columns = ['School_Seed','School']
     
     seedings_2019 = seedings_2019_a
-    seedings_2019 = seedings_2019.append(seedings_2019_b)
+    #seedings_2019 = seedings_2019.append(seedings_2019_b)
+    seedings_2019 = pd.concat([seedings_2019, seedings_2019_b])
     
     
     seedings_dict = dict(zip(seedings_2019['School'], seedings_2019['School_Seed']))
@@ -186,7 +187,10 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     rnd+=1
     pick_results['Round'] = rnd
-    all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    #all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    all_pick_results = pd.concat([all_pick_results, pick_results])
+    all_pick_results = all_pick_results.reset_index(drop=True)
+    
     
     print ('\nFirst Round Winners')
     first_round_winners = list(pick_results['Winner'])
@@ -237,7 +241,9 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     rnd+=1
     pick_results['Round'] = rnd
-    all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    #all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    all_pick_results = pd.concat([all_pick_results, pick_results])
+    all_pick_results = all_pick_results.reset_index(drop=True)
     all_pick_results['School_Seed'] = all_pick_results['School'].map(seedings_dict)
     
     
@@ -287,7 +293,9 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     rnd+=1
     pick_results['Round'] = rnd
-    all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    #all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    all_pick_results = pd.concat([all_pick_results, pick_results])
+    all_pick_results = all_pick_results.reset_index(drop=True)
     
     print ('\nSweet Sixteen Winners')
     third_round_winners = list(pick_results['Winner'])
@@ -336,7 +344,9 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     rnd+=1
     pick_results['Round'] = rnd
-    all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    #all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    all_pick_results = pd.concat([all_pick_results, pick_results])
+    all_pick_results = all_pick_results.reset_index(drop=True)
     
     print ('\nElite Eight Winners')
     fourth_round_winners = list(pick_results['Winner'])
@@ -388,7 +398,9 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     rnd+=1
     pick_results['Round'] = rnd
-    all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    #all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    all_pick_results = pd.concat([all_pick_results, pick_results])
+    all_pick_results = all_pick_results.reset_index(drop=True)
     
     print ('\nFinal Four Winners')
     fifth_round_winners = list(pick_results['Winner'])
@@ -437,7 +449,9 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     
     rnd+=1
     pick_results['Round'] = rnd
-    all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    #all_pick_results = all_pick_results.append(pick_results,sort=False).reset_index(drop=True)
+    all_pick_results = pd.concat([all_pick_results, pick_results])
+    all_pick_results = all_pick_results.reset_index(drop=True)
     
     print ('\nNational Champions')
     sixth_round_winners = list(pick_results['Winner'])
