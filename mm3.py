@@ -475,6 +475,9 @@ def run(current_year, to_predict_df, final_results, team_stats_2019):
     drop_cols_alpha = ['WinnerSeed', 'LoserSeed', 'Loser']
     all_pick_results = all_pick_results.drop(drop_cols_alpha, axis=1)  
     
+    all_pick_results['Winner_Prob'] = all_pick_results.apply(lambda x: x['Prob'] if x['Winner'] == x['School'] else 1 - x['Prob'], axis=1)
+
+    
     print ('\nAdvanced to second round:\n',first_round_winners)
     print ('\nAdvanced to Sweet 16:\n',second_round_winners)
     print ('\nAdvanced to Elite Eight:\n',third_round_winners)

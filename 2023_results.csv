@@ -1,64 +1,64 @@
 School_Seed,School,School_Opp_Seed,School_Opp,Outcome,Prob,Winner,Upset,Round,Winner_Prob
-8,Maryland,9,West Virginia,Loss,0.39514625,West Virginia,Upset,1,0.6048537492752075
-4,Virginia,13,Furman,Loss,0.3684664,Furman,Upset,1,0.6315336227416992
-7,Missouri,10,Utah State,Loss,0.20034555,Utah State,Upset,1,0.799654483795166
-1,Kansas,16,Howard,Win,0.9514546,Kansas,No,1,0.9514545798301697
-1,Alabama,16,Texas A&M-Corpus Christi,Win,0.96117634,Alabama,No,1,0.961176335811615
-5,San Diego State,12,Charleston Southern,Win,0.9983783,San Diego State,No,1,0.9983782768249512
-2,Arizona,15,Princeton,Win,0.9884946,Arizona,No,1,0.9884945750236511
-8,Arkansas,9,Illinois,Win,0.858978,Arkansas,No,1,0.8589779734611511
-8,Iowa,9,Auburn,Loss,0.32940075,Auburn,Upset,1,0.6705992221832275
-5,Duke,12,Oral Roberts,Win,0.94844425,Duke,No,1,0.9484442472457886
-2,Texas,15,Colgate,Win,0.9886048,Texas,No,1,0.9886047840118408
-7,Northwestern,10,Boise State,Loss,0.040600765,Boise State,Upset,1,0.9593992233276367
-1,Houston,16,Northern Kentucky,Win,0.95968693,Houston,No,1,0.9596869349479675
-4,Tennessee,13,Louisiana,Win,0.6976778,Tennessee,No,1,0.6976777911186218
-7,Texas A&M,10,Penn State,Loss,0.37406644,Penn State,Upset,1,0.6259335279464722
-2,UCLA,15,UNC Asheville,Win,0.9665255,UCLA,No,1,0.9665254950523376
-7,Michigan State,10,Southern California,Win,0.64679503,Michigan State,No,1,0.6467950344085693
-3,Xavier,14,Kennesaw State,Win,0.9251905,Xavier,No,1,0.9251905083656311
-3,Baylor,14,UC Santa Barbara,Win,0.6551346,Baylor,No,1,0.6551346182823181
-5,Saint Mary's (CA),12,Virginia Commonwealth,Win,0.7846648,Saint Mary's (CA),No,1,0.7846648097038269
-2,Marquette,15,Vermont,Win,0.97505254,Marquette,No,1,0.975052535533905
-6,Iowa State,11,Pittsburgh,Win,0.7879258,Iowa State,No,1,0.7879257798194885
-6,Creighton,11,NC State,Win,0.5821561,Creighton,No,1,0.5821561217308044
-4,Connecticut,13,Iona,Loss,0.2587481,Iona,Upset,1,0.7412518858909607
-1,Purdue,16,Texas Southern/Fairleigh Dickinson,Win,0.9889761,Purdue,No,1,0.9889761209487915
-6,Kentucky,11,Providence,Win,0.7516541,Kentucky,No,1,0.7516540884971619
-5,Miami (FL),12,Drake,Loss,0.2377174,Drake,Upset,1,0.7622826099395752
-3,Gonzaga,14,Grand Canyon,Win,0.8810604,Gonzaga,No,1,0.8810604214668274
-8,Memphis,9,Florida Atlantic,Win,0.9437447,Memphis,No,1,0.9437447190284729
-3,Kansas State,14,Montana State,Win,0.5772913,Kansas State,No,1,0.5772913098335266
-4,Indiana,13,Kent State,Loss,0.4924419,Kent State,Upset,1,0.5075581073760986
-6,TCU,11,Arizona State/Nevada,Win,0.59547925,TCU,No,1,0.5954792499542236
-9,West Virginia,13,Furman,Win,0.8630466,West Virginia,No,2,0.8630465865135193
-10,Utah State,1,Kansas,Loss,0.37069315,Kansas,No,2,0.3706931471824646
-1,Alabama,5,San Diego State,Win,0.5844693,Alabama,No,2,0.5844693183898926
-2,Arizona,8,Arkansas,Win,0.829268,Arizona,No,2,0.8292679786682129
-9,Auburn,5,Duke,Loss,0.069522955,Duke,No,2,0.06952295452356339
-2,Texas,10,Boise State,Win,0.87701464,Texas,No,2,0.8770146369934082
-1,Houston,4,Tennessee,Win,0.68759304,Houston,No,2,0.6875930428504944
-10,Penn State,2,UCLA,Loss,0.3629441,UCLA,No,2,0.362944096326828
-7,Michigan State,3,Xavier,Loss,0.2270725,Xavier,No,2,0.22707250714302063
-3,Baylor,5,Saint Mary's (CA),Loss,0.24039364,Saint Mary's (CA),Upset,2,0.7596063613891602
-2,Marquette,6,Iowa State,Win,0.83839935,Marquette,No,2,0.838399350643158
-6,Creighton,13,Iona,Loss,0.40610904,Iona,Upset,2,0.5938909649848938
-1,Purdue,6,Kentucky,Win,0.9181859,Purdue,No,2,0.9181858897209167
-12,Drake,3,Gonzaga,Loss,0.09871379,Gonzaga,No,2,0.09871379286050797
-8,Memphis,3,Kansas State,Win,0.87810403,Memphis,Upset,2,0.12189596891403198
-13,Kent State,6,TCU,Win,0.6980293,Kent State,Upset,2,0.3019707202911377
-9,West Virginia,1,Kansas,Loss,0.084707335,Kansas,No,3,0.0847073346376419
-1,Alabama,2,Arizona,Win,0.7807935,Alabama,No,3,0.7807934880256653
-5,Duke,2,Texas,Loss,0.3718631,Texas,No,3,0.37186309695243835
-1,Houston,2,UCLA,Loss,0.31425276,UCLA,Upset,3,0.6857472658157349
-3,Xavier,5,Saint Mary's (CA),Loss,0.35801813,Saint Mary's (CA),Upset,3,0.641981840133667
-2,Marquette,13,Iona,Win,0.5528761,Marquette,No,3,0.5528761148452759
-1,Purdue,3,Gonzaga,Win,0.5473734,Purdue,No,3,0.5473734140396118
-8,Memphis,13,Kent State,Win,0.89293015,Memphis,No,3,0.8929301500320435
-1,Kansas,1,Alabama,Win,0.69387096,Kansas,No,4,0.6938709616661072
-2,Texas,2,UCLA,Loss,0.47102728,UCLA,No,4,0.47102728486061096
-5,Saint Mary's (CA),2,Marquette,Win,0.5124934,Saint Mary's (CA),Upset,4,0.487506628036499
-1,Purdue,8,Memphis,Loss,0.4153792,Memphis,Upset,4,0.5846208333969116
-8,Memphis,1,Kansas,Loss,0.3675996,Kansas,No,5,0.36759960651397705
-2,UCLA,5,Saint Mary's (CA),Win,0.5757406,UCLA,No,5,0.5757405757904053
-1,Kansas,2,UCLA,Win,0.6762537,Kansas,No,6,0.6762536764144897
+1,Alabama,16,Texas A&M-Corpus Christi,Win,0.9891516,Alabama,No,1,0.9891515970230103
+8,Maryland,9,West Virginia,Loss,0.2414496,West Virginia,Upset,1,0.7585504055023193
+5,San Diego State,12,Charleston Southern,Win,0.9989095,San Diego State,No,1,0.9989094734191895
+4,Virginia,13,Furman,Loss,0.41220024,Furman,Upset,1,0.5877997577190399
+6,Creighton,11,NC State,Loss,0.35724273,NC State,Upset,1,0.6427572667598724
+3,Baylor,14,UC Santa Barbara,Win,0.8943892,Baylor,No,1,0.8943892121315002
+7,Missouri,10,Utah State,Loss,0.34275913,Utah State,Upset,1,0.6572408676147461
+2,Arizona,15,Princeton,Win,0.99191415,Arizona,No,1,0.9919141530990601
+1,Purdue,16,Texas Southern/Fairleigh Dickinson,Win,0.9932648,Purdue,No,1,0.9932647943496704
+8,Memphis,9,Florida Atlantic,Win,0.9622839,Memphis,No,1,0.9622839093208313
+5,Duke,12,Oral Roberts,Win,0.9682728,Duke,No,1,0.9682728052139282
+4,Tennessee,13,Louisiana,Win,0.814908,Tennessee,No,1,0.8149080276489258
+6,Kentucky,11,Providence,Win,0.63467133,Kentucky,No,1,0.6346713304519653
+3,Kansas State,14,Montana State,Win,0.6986529,Kansas State,No,1,0.6986529231071472
+7,Michigan State,10,Southern California,Loss,0.4539969,Southern California,Upset,1,0.5460031032562256
+2,Marquette,15,Vermont,Win,0.9695972,Marquette,No,1,0.9695972204208374
+1,Houston,16,Northern Kentucky,Win,0.9120509,Houston,No,1,0.9120509028434753
+8,Iowa,9,Auburn,Loss,0.14217192,Auburn,Upset,1,0.8578280806541443
+5,Miami (FL),12,Drake,Loss,0.36118737,Drake,Upset,1,0.6388126313686371
+4,Indiana,13,Kent State,Loss,0.25507155,Kent State,Upset,1,0.7449284493923187
+6,Iowa State,11,Pittsburgh,Win,0.7070916,Iowa State,No,1,0.7070916295051575
+3,Xavier,14,Kennesaw State,Win,0.9275155,Xavier,No,1,0.9275155067443848
+7,Texas A&M,10,Penn State,Win,0.55055493,Texas A&M,No,1,0.5505549311637878
+2,Texas,15,Colgate,Win,0.99410665,Texas,No,1,0.994106650352478
+1,Kansas,16,Howard,Win,0.9509308,Kansas,No,1,0.9509307742118835
+8,Arkansas,9,Illinois,Win,0.7464436,Arkansas,No,1,0.7464436292648315
+5,Saint Mary's (CA),12,Virginia Commonwealth,Win,0.87243026,Saint Mary's (CA),No,1,0.8724302649497986
+4,Connecticut,13,Iona,Loss,0.36132666,Iona,Upset,1,0.638673335313797
+6,TCU,11,Arizona State/Nevada,Loss,0.2819098,Arizona State/Nevada,Upset,1,0.7180902063846588
+3,Gonzaga,14,Grand Canyon,Win,0.8873748,Gonzaga,No,1,0.8873748183250427
+7,Northwestern,10,Boise State,Loss,0.056984693,Boise State,Upset,1,0.9430153071880341
+2,UCLA,15,UNC Asheville,Win,0.96278256,UCLA,No,1,0.9627825617790222
+1,Alabama,9,West Virginia,Win,0.92315143,Alabama,No,2,0.923151433467865
+5,San Diego State,13,Furman,Win,0.93358505,San Diego State,No,2,0.9335850477218628
+11,NC State,3,Baylor,Loss,0.2071673,Baylor,No,2,0.7928327023983002
+10,Utah State,2,Arizona,Win,0.5880656,Utah State,Upset,2,0.5880656242370605
+1,Purdue,8,Memphis,Loss,0.47741526,Memphis,Upset,2,0.5225847363471985
+5,Duke,4,Tennessee,Win,0.6179566,Duke,Upset,2,0.6179565787315369
+6,Kentucky,3,Kansas State,Loss,0.17372575,Kansas State,No,2,0.8262742459774017
+10,Southern California,2,Marquette,Loss,0.21475916,Marquette,No,2,0.7852408438920975
+1,Houston,9,Auburn,Win,0.8756407,Houston,No,2,0.8756406903266907
+12,Drake,13,Kent State,Win,0.57833904,Drake,No,2,0.5783390402793884
+6,Iowa State,3,Xavier,Loss,0.41534466,Xavier,No,2,0.5846553444862366
+7,Texas A&M,2,Texas,Loss,0.3543704,Texas,No,2,0.6456296145915985
+1,Kansas,8,Arkansas,Win,0.9243428,Kansas,No,2,0.9243428111076355
+5,Saint Mary's (CA),13,Iona,Win,0.6500331,Saint Mary's (CA),No,2,0.6500331163406372
+11,Arizona State/Nevada,3,Gonzaga,Loss,0.0934553,Gonzaga,No,2,0.9065447002649307
+10,Boise State,2,UCLA,Loss,0.29569042,UCLA,No,2,0.7043095827102661
+1,Alabama,5,San Diego State,Win,0.8894417,Alabama,No,3,0.889441728591919
+3,Baylor,10,Utah State,Loss,0.4432237,Utah State,Upset,3,0.5567762851715088
+8,Memphis,5,Duke,Win,0.6579452,Memphis,Upset,3,0.6579452157020569
+3,Kansas State,2,Marquette,Loss,0.42419907,Marquette,No,3,0.5758009254932404
+1,Houston,12,Drake,Win,0.7438304,Houston,No,3,0.7438303828239441
+3,Xavier,2,Texas,Loss,0.13679214,Texas,No,3,0.8632078617811203
+1,Kansas,5,Saint Mary's (CA),Win,0.7387776,Kansas,No,3,0.7387775778770447
+3,Gonzaga,2,UCLA,Win,0.7550997,Gonzaga,Upset,3,0.7550997138023376
+1,Alabama,10,Utah State,Win,0.8576071,Alabama,No,4,0.8576071262359619
+8,Memphis,2,Marquette,Win,0.8108133,Memphis,Upset,4,0.810813307762146
+1,Houston,2,Texas,Loss,0.3465065,Texas,Upset,4,0.6534934937953949
+1,Kansas,3,Gonzaga,Win,0.82279813,Kansas,No,4,0.8227981328964233
+1,Kansas,1,Alabama,Win,0.8127303,Kansas,No,5,0.8127303123474121
+8,Memphis,2,Texas,Win,0.54094416,Memphis,Upset,5,0.5409441590309143
+1,Kansas,8,Memphis,Win,0.6700697,Kansas,No,6,0.670069694519043

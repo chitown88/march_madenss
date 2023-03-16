@@ -83,6 +83,20 @@ def run(current_year, team_stats_2019, school_links):
     
     
     df = df[df['round'] == '1st round']
+    
+    sort_seed_list = seed_list[::2]
+    seed_cat = pd.CategoricalDtype(sort_seed_list, ordered=True)
+    
+
+    df_list = []
+    for region in ['south region', 'east region', 'midwest region', 'west region']:
+        temp_df = df[df['region'] == region]
+        temp_df = temp_df.sort_values('School_Seed', key=lambda x: x.astype(seed_cat).cat.codes)
+        df_list.append(temp_df)
+        
+    df = pd.concat(df_list, axis=0)
+    df = df.reset_index(drop=True)
+    
     df = df.drop('round', axis=1)
     df = df.drop('region', axis=1)
 
