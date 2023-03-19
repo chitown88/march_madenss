@@ -18,6 +18,9 @@ def run(current_year, team_stats_2019, school_links):
 
     seed_list = [1,16,8,9,5,12,4,13,6,11,3,14,7,10,2,15]
     
+    # top left, bottom right, bottom left, top right
+    region_list = ['south region', 'west region', 'midwest region', 'east region']
+    
     seasons_list = [current_year]
     tourny_results_2019 = pd.DataFrame()
     events = []
@@ -89,7 +92,7 @@ def run(current_year, team_stats_2019, school_links):
     
 
     df_list = []
-    for region in ['south region', 'east region', 'midwest region', 'west region']:
+    for region in region_list:
         temp_df = df[df['region'] == region]
         temp_df = temp_df.sort_values('School_Seed', key=lambda x: x.astype(seed_cat).cat.codes)
         df_list.append(temp_df)
